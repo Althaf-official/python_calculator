@@ -27,6 +27,7 @@ window=tk.Tk()
 window.geometry("300x300")
 field=tk.Text(window,height=2,width=20,font=("Times New Roman",20))
 field.grid(row=1,column=1,columnspan=4)
+
 #number button
 btn_1=tk.Button(window,text="1",command=lambda: add_to_field(1),width=5,font=("Times New Roman",14))
 btn_1.grid(row=4,column=1)
@@ -57,6 +58,35 @@ btn_9.grid(row=2,column=3)
 
 btn_0=tk.Button(window,text="0",command=lambda: add_to_field(0),width=5,font=("Times New Roman",14))
 btn_0.grid(row=5,column=1)
+
+# Operation Buttons
+btn_plus=tk.Button(window,text="+",command=lambda: add_to_field("+"),width=5,font=("Times New Roman",14))
+btn_plus.grid(row=4,column=4)
+
+btn_minus=tk.Button(window,text="-",command=lambda: add_to_field("-"),width=5,font=("Times New Roman",14))
+btn_minus.grid(row=5,column=4)
+
+btn_times=tk.Button(window,text="*",command=lambda: add_to_field("*"),width=5,font=("Times New Roman",14))
+btn_times.grid(row=3,column=4)
+
+btn_division=tk.Button(window,text="/",command=lambda: add_to_field("/"),width=5,font=("Times New Roman",14))
+btn_division.grid(row=2,column=4)
+
+btn_clear=tk.Button(window,text="clear",command=lambda: clear(),width=5,font=("Times New Roman",14))
+btn_clear.grid(row=5,column=3)
+
+btn_decimal=tk.Button(window,text=".",command=lambda: add_to_field("."),width=5,font=("Times New Roman",14))
+btn_decimal.grid(row=5,column=2)
+
+btn_open_parenthesis=tk.Button(window,text="(",command=lambda: add_to_field("("),width=5,font=("Times New Roman",14))
+btn_open_parenthesis.grid(row=6,column=1)
+
+btn_close_parenthesis=tk.Button(window,text=")",command=lambda: add_to_field(")"),width=5,font=("Times New Roman",14))
+btn_close_parenthesis.grid(row=6,column=2)
+
+btn_equal=tk.Button(window,text="=",command=lambda: calculate(),width=13,font=("Times New Roman",14))
+btn_equal.grid(row=6,column=3,columnspan=2)
+
 
 window.mainloop()
 
