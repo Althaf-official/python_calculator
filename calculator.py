@@ -72,6 +72,7 @@ btn_times.grid(row=3,column=4)
 btn_division=tk.Button(window,text="/",command=lambda: add_to_field("/"),width=5,font=("Times New Roman",14))
 btn_division.grid(row=2,column=4)
 
+#when we click clear button then it will call the clear function
 btn_clear=tk.Button(window,text="clear",command=lambda: clear(),width=5,font=("Times New Roman",14))
 btn_clear.grid(row=5,column=3)
 
