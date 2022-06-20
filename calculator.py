@@ -7,9 +7,14 @@ def add_to_field(sth):
     global feild_text
     #so now we will make the  sth as a string and we will update the feild text
     feild_text=feild_text+str(sth)
-
     field.delete("1.0","end")
     field.insert("1.0",feild_text)
+def calculate():
+    global feild_text
+    result=str(eval(feild_text))
+    field.delete("1.0", "end")
+    field.insert("1.0",result)
+
 
 #now im going to create a window
 window=tk.Tk()
